@@ -114,7 +114,7 @@ body::after {
 	z-index: -1;
 }
 
-#content {
+main {
 	margin: 70px clamp(32px, 6vw, 100px);
 
 	display: flex;
@@ -560,7 +560,7 @@ header > p {
 }
 
 @media (min-width: 700px) {
-	#content {
+	main {
 		flex-direction: row;
 	}
 
