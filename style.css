@@ -12,6 +12,7 @@ html {
 	font-family: "Rubik", "Helvetica", "Arial", sans-serif;
 	line-height: 1.5;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 
 	--sub-head-violet: #eee2f3;
 	--chat-left-violet: #8436b8;
