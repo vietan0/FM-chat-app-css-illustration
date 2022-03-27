@@ -137,6 +137,140 @@ body::after {
 	padding: 12px;
 }
 
+#phone {
+	animation-name: "fade";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+	@keyframes fade {
+	0% {
+		opacity: 0.9;
+		margin-left: -100px;
+		margin-right: 100px;
+	}
+}
+
+.message-container.left > div
+ {
+	animation-name: "left-chat-fade-1";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(2) > div {
+	animation-name: "left-chat-fade-2";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(3) > div {
+	animation-name: "right-chat-fade-1";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(4) > div {
+	animation-name: "right-chat-fade-2";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(5) > div {
+	animation-name: "right-chat-fade-3";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(6) > div {
+	animation-name: "left-chat-fade-6";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(7) > div {
+	animation-name: "left-chat-fade-7";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+.message-container:nth-child(8) > div {
+	animation-name: "left-chat-fade-8";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes left-chat-fade-1 {
+	0% {
+		margin-left: -100px;
+	}
+}
+
+@keyframes left-chat-fade-2 {
+	0% {
+		margin-left: -150px;
+	}
+}
+
+@keyframes right-chat-fade-1 {
+	0% {
+		margin-right: -200px;
+	}
+}
+
+@keyframes right-chat-fade-2 {
+	0% {
+		margin-right: -250px; 
+	}
+}
+
+@keyframes right-chat-fade-3 {
+	0% {
+		margin-right: -300px; 
+	}
+}
+
+@keyframes left-chat-fade-6 {
+	0% {
+		margin-left: -350px;
+	}
+}
+
+@keyframes left-chat-fade-7 {
+	0% {
+		margin-left: -400px;
+	}
+}
+
+@keyframes left-chat-fade-8 {
+	0% {
+		margin-left: -450px;
+	}
+}
+
+.type-box {
+	animation-name: "type-box-popup";
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes type-box-popup {
+	0% {
+		margin-top: 100px;
+		margin-bottom: -85px;
+	}
+}
+
 #phone-screen {
 	background-color: var(--app-bg);
 	border-radius: 20px;
@@ -353,26 +487,75 @@ header {
 	text-align: center;
 }
 
-header > h2 {
+h2 {
 	font-size: clamp(2rem, 9vw, 2.5rem);
 	font-weight: 500;
 	line-height: 1.1;
 	letter-spacing: -0.5px;
 	color: var(--heading-violet);
+
+	animation-name: "h2-fade";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes h2-fade {
+	0% {
+		opacity: 0%;
+		margin-bottom: -25px;
+		margin-top: 25px;
+	}
 }
 
 header > p {
 	max-width: 47ch;
+
+	animation-name: "p-fade";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes p-fade {
+	0% {
+		opacity: 0%;
+		margin-bottom: -60px;
+		margin-top: 60px;
+	}
 }
 
 .attribution {
 	font-size: 13px;
 	margin-top: 1.5rem;
+
+	animation-name: "attr-fade";
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes attr-fade {
+	0% {
+		opacity: 0%;
+		margin-bottom: -150px;
+		margin-top: 150px;
+	}
 }
 
 .attribution a {
 	font-weight: 700;
 	color: var(--heading-violet);
+	transition: background-size 0.2s ease-out;
+
+	background-image: linear-gradient(currentColor, currentColor);
+	background-repeat: no-repeat;
+	background-size: 0% 1px;
+	background-position: bottom left;
+}
+
+.attribution a:hover {
+	background-size: 100% 1px;
 }
 
 @media (min-width: 700px) {
